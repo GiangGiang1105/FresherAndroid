@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screen.authentication.fragment.ProfilePictureFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTextStepAuth"
+        android:layout_marginTop="@dimen/dp_50"
+        android:text="@string/text_next_step" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTextStepAuth"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/text_profile_picture" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_200"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_30"
+        android:src="@drawable/ic_person" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTextTitlePhoto"
+        android:text="@string/text_upload_a_photo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTextPicture"
+        android:text="@string/text_from_your_mobile" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTextTitlePhoto"
+        android:text="@string/text_take_a_photo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTextPicture"
+        android:text="@string/text_with_your_camera" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        style="@style/StyleLinearLayoutProfile"
+        android:layout_marginTop="@dimen/dp_70">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSkip"
+            style="@style/StyleButtonAuthParent"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_state_pressed"
+            android:text="@string/text_button_skip" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonFinish"
+            style="@style/StyleButtonAuthParent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_state_normal"
+            android:text="@string/text_button_finish" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

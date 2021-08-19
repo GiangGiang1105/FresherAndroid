@@ -1,0 +1,2 @@
+rootProject.name = "GiangNNH_AdvanceAndroid_Day3"
+include ':app'

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GiangNNH_AdvanceAndroid_Day2</string>
+    <string name="text_button">Bấm đi, ngại gì!</string>
+    <string name="text_buton_watch">Watch</string>
+    <string name="text_button_preview">Preview</string>
+    <string name="text_calendar">Khởi chiếu ngày 29/8/2021</string>
+</resources>

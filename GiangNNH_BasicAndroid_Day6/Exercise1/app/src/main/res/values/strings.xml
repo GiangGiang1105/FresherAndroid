@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Calculate</string>
+    <string name="text_input_a">Input Number A</string>
+    <string name="text_input_b">Input Number B</string>
+    <string name="text_button_add">+</string>
+    <string name="text_button_minus">-</string>
+    <string name="text_button_multi">*</string>
+    <string name="text_button_divide">/</string>
+    <string name="textview_result">Result</string>
+    <string name="text_my_calculate">My Calculate</string>
+</resources>

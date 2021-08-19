@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screen.fragment.BFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTextFragment"
+        android:text="@string/text_fragment_b" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTextTitleInput"
+        android:text="@string/text_name" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextName"
+        style="@style/StyleEditText"
+        android:hint="@string/hint_text_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTextTitleInput"
+        android:text="@string/text_age" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextAge"
+        style="@style/StyleEditText"
+        android:hint="@string/hint_text_age"
+        android:inputType="numberDecimal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTextTitleInput"
+        android:text="@string/text_class" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextClass"
+        android:hint="@string/hint_text_class"
+        style="@style/StyleEditText"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTextTitleInput"
+        android:text="@string/text_avg_score" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextAvgScore"
+        style="@style/StyleEditText"
+        android:hint="@string/hint_text_avg_score"
+        android:inputType="numberDecimal" />
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Music &amp; Alarm</string>
+    <string name="error_network">Error NetWork</string>
+    <string name="error_code">Error Code: </string>
+    <string name="text_button_book">Book</string>
+    <string name="toast_message_book_alarm">You book alarm succesfully!</string>
+    <string name="pause">Pause</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="text_rich">Hihihi</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="StyleTextItemStudent" parent="StyleSizeParentWrap">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginEnd">@dimen/dp_5</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_E4AF5402</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="StyleTextFragment" parent="StyleSizeParentMatch">
+        <item name="android:layout_marginTop">@dimen/dp_30</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_A10A0A</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/sp_30</item>
+    </style>
+
+    <style name="StyleTextTitleInput" parent="StyleSizeParentWrap">
+        <item name="android:layout_marginRight">@dimen/dp_20</item>
+        <item name="android:layout_marginLeft">@dimen/dp_20</item>
+        <item name="android:layout_marginTop">@dimen/dp_20</item>
+        <item name="android:textColor">@color/color_041050</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+    <style name="StyleEditText" parent="StyleSizeParentMatch">
+        <item name="android:layout_marginRight">@dimen/dp_20</item>
+        <item name="android:layout_marginLeft">@dimen/dp_20</item>
+        <item name="android:layout_marginTop">@dimen/dp_10</item>
+    </style>
+    <style name="StyleSizeParentMatch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="StyleSizeParentWrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>

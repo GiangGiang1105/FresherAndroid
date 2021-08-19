@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Day7Exercise1</string>
+    <string name="message_deny_request_permission_read_sms">You can\'t access this app, because you not yet granted permission read sms! To open app, you need allow request permission app access sms data by click Allow or Deny to finish app!</string>
+    <string name="message_retionable_request_permission_read_sms">You can\'t access this app, because you used to denied permission read sms! To open app, you need allow request permission app access sms data by click Allow or Deny to finish app!</string>
+    <string name="message_deny_forever_permission">You can\'t read this sms! Because you denied forever permission read sms!</string>
+    <string name="allow_request_permission">Allow</string>
+    <string name="deny_request_permission">Deny</string>
+    <string name="text_error">Error!!!!</string>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screen.authentication.fragment.SignInFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTextSignUp"
+        android:text="@string/text_button_login" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneTextField"
+        style="@style/StyleTextInputLayout"
+        android:layout_marginTop="@dimen/dp_50"
+        android:hint="@string/hint_input_phone_number"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/color_03786D"
+        app:hintTextColor="@color/color_03786D">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/StyleTextInputEditField"
+            android:inputType="phone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTextField"
+        style="@style/StyleTextInputLayout"
+        android:layout_marginTop="@dimen/dp_10"
+        android:hint="@string/hint_text_password"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/color_03786D"
+        app:hintTextColor="@color/color_03786D"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/StyleTextInputEditField"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_30"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/agreeCheckBox"
+            style="@style/StyleCheckboxAuth"
+            android:layout_weight="1"
+            android:text="@string/text_remember_me" />
+
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:text="@string/text_forgot_password"
+            android:textColor="@color/color_7E000000" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSignIn"
+        style="@style/StyleButtonAuth"
+        android:text="@string/text_button_login" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/buttonSignUp"
+        style="@style/StyleImageButtonAuth"
+        android:src="@drawable/ic_sign_up" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

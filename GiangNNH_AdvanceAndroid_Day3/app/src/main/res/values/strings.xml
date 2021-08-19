@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PropertyAnimation</string>
+    <string name="text_button_rotate">Rotate</string>
+    <string name="text_button_translate">Translate</string>
+    <string name="text_button_scale">Scale</string>
+    <string name="text_button_fade">Fade</string>
+    <string name="text_button_sky_color">Sky Color</string>
+    <string name="text_button_shower">Shower</string>
+</resources>

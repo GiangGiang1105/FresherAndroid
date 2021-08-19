@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AppB</string>
+    <string name="hint_message">Message</string>
+    <string name="text_start_app_a_by_intent">Start App A By Intent</string>
+    <string name="text_start_app_a_by_broadcast">Start App A By BroadCast</string>
+</resources>

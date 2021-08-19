@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GiangNNH_BasicAndroid_Day5</string>
+    <string name="text_fragment_a">Fragment A</string>
+    <string name="text_name">Name</string>
+    <string name="text_fragment_b">Fragment B</string>
+    <string name="text_age">Age</string>
+    <string name="hint_text_age">Age</string>
+    <string name="hint_text_name">Name</string>
+    <string name="text_class">Class</string>
+    <string name="hint_text_class">Class</string>
+    <string name="text_avg_score">Avg Score</string>
+    <string name="hint_text_avg_score">Age Score</string>
+    <string name="text_button_add_new_student">Add New Student</string>
+    <string name="text_button_save_student">Save Student</string>
+    <string name="error_edit_text_age">Age is not valid! Please check name field!</string>
+    <string name="error_edit_text_avgscore">Avg Score is not valid! Please check avg score field!</string>
+    <string name="error_edit_text_class">"Class is not valid! Please check class field!"</string>
+    <string name="error_edit_text_name">Name is null or lenght is very short! Please check name field!</string>
+</resources>

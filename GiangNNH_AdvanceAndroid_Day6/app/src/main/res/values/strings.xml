@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">GiangNNH_AdvanceAndroid_Day6</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_wechat">WeChat</string>
+    <string name="text_multimedia">MULTIMEDIA</string>
+    <string name="text_function_wechat"><![CDATA[Chat & Call & Mail]]></string>
+    <string name="text_button_sign_up">SIGN UP</string>
+    <string name="text_button_login">LOGIN</string>
+    <string name="hint_input_phone_number">Phone Number</string>
+    <string name="hint_text_password">Password</string>
+    <string name="hint_text_comfirm_password">Comfirm Password</string>
+    <string name="text_check_box">I argee to the <b>TERMS AND CONDITION</b></string>
+    <string name="text_remember_me">Remember me</string>
+    <string name="text_forgot_password">Forgot Password</string>
+    <string name="text_next_step">NEXT STEP</string>
+    <string name="text_profile_information">Profile Information</string>
+    <string name="hint_input_first_name">First Name</string>
+    <string name="hint_input_last_name">Last Name</string>
+    <string name="hint_input_email">Email</string>
+    <string name="text_birthday">Birthday</string>
+    <string name="text_sex">Sex</string>
+    <string name="text_male">Male</string>
+    <string name="text_female">Female</string>
+    <string name="text_button_continue">CONTINUE</string>
+    <string name="text_profile_picture">Profile Picture</string>
+    <string name="text_upload_a_photo">Upload a Photo</string>
+    <string name="text_from_your_mobile">From your mobile</string>
+    <string name="text_take_a_photo">Take a Photo</string>
+    <string name="text_with_your_camera">With your camera</string>
+    <string name="text_button_skip">Skip</string>
+    <string name="text_button_finish">Finish</string>
+    <string name="title_message">Message</string>
+    <string name="title_home">Home</string>
+    <string name="text_add_chat"><b>No Conversations</b>\n Tab the + button to start conversation!</string>
+</resources>

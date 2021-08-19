@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_03786D"
+    tools:context=".screen.authentication.fragment.AuthFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp150"
+            android:layout_height="@dimen/dp150"
+            android:src="@drawable/logo_wechat" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="-40dp"
+            android:text="@string/text_wechat"
+            android:textSize="@dimen/sp_30"
+            android:textStyle="bold"
+            style="@style/StyleTextViewAuth"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="50dp"
+            android:text="@string/text_multimedia"
+            android:textSize="@dimen/sp_40"
+            android:textStyle="bold"
+            style="@style/StyleTextViewAuth" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/text_function_wechat"
+            android:textSize="@dimen/sp_22"
+            style="@style/StyleTextViewAuth"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_100"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonSignUp"
+                style="@style/StyleButton"
+                android:text="@string/text_button_sign_up" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonLogin"
+                style="@style/StyleButton"
+                android:text="@string/text_button_login" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>

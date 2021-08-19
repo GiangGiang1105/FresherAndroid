@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyContact</string>
+    <string name="content">Content</string>
+    <string name="please_note">Please note!</string>
+    <string name="title">Title</string>
+    <string name="hint_title">title</string>
+</resources>

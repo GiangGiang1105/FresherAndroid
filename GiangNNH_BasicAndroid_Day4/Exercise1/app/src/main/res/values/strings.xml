@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Exercise1</string>
+    <string name="btn_one">One</string>
+    <string name="btn_two">Two</string>
+    <string name="btn_three">Three</string>
+    <string name="btn_four">Four</string>
+</resources>

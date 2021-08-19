@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:hint="@string/hint_message" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonStartAppAByIntent"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/text_start_app_a_by_intent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonStartAppAByBroadCast"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/text_start_app_a_by_broadcast" />
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="country"
+            type="com.example.giangnnh_advanceandroid_day1.data.model.Country" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_F9FDD1"
+        android:padding="@dimen/dp_10">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/nameCountry"
+                android:text="@{country.name}"
+                style="@style/StyleTextView" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/codeCountry"
+                android:text="@{country.code}"
+                style="@style/StyleTextView" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screen.authentication.fragment.ProfileInfoFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTextStepAuth"
+        android:layout_marginTop="@dimen/dp_50"
+        android:text="@string/text_next_step" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTextStepAuth"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/text_profile_information" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        style="@style/StyleLinearLayoutProfile"
+        android:layout_marginTop="@dimen/dp_50">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/firstNameTextField"
+            style="@style/StyleTextInputLayoutParent"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_weight="1"
+            android:hint="@string/hint_input_first_name"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/color_03786D"
+            app:hintTextColor="@color/color_03786D">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/StyleTextInputEditField"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lastNameTextField"
+            style="@style/StyleTextInputLayoutParent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="1"
+            android:hint="@string/hint_input_last_name"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/color_03786D"
+            app:hintTextColor="@color/color_03786D">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/StyleTextInputEditField"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTextField"
+        style="@style/StyleTextInputLayout"
+        android:layout_marginTop="@dimen/dp_10"
+        android:hint="@string/hint_input_email"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/color_03786D"
+        app:hintTextColor="@color/color_03786D">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/StyleTextInputEditField"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        style="@style/StyleLinearLayoutProfile"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="@string/text_birthday"
+            android:textColor="@color/color_7E000000"
+            android:textSize="@dimen/sp_22" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dateTextField"
+            style="@style/StyleTextInputEditField"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:focusable="false"
+            android:inputType="date" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        style="@style/StyleLinearLayoutProfile"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/text_sex"
+            android:textColor="@color/color_7E000000"
+            android:textSize="@dimen/sp_22" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_70"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioMale"
+                style="@style/StyleRadioButtonAuth"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="@string/text_male" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioFemale"
+                style="@style/StyleRadioButtonAuth"
+                android:text="@string/text_female" />
+        </RadioGroup>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonContinue"
+        style="@style/StyleButtonAuth"
+        android:text="@string/text_button_continue" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

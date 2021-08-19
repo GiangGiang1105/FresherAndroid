@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <import type="kotlin.jvm.functions.Function1" />
+
+        <import type="kotlin.Unit" />
+
+        <import type="com.example.giangnnh_advanceandroid_day4.data.model.Category" />
+
+        <variable
+            name="category"
+            type="com.example.giangnnh_advanceandroid_day4.data.model.Category" />
+
+        <variable
+            name="bool"
+            type="Boolean" />
+
+        <variable
+            name="onClickListener"
+            type="Function1&lt;Category, Unit>" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@color/color_8FF4EB"
+        android:onClick="@{() -> onClickListener.invoke(category)}">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageCategory"
+                set_url="@{category.strCategoryThumb}"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:layout_marginEnd="@dimen/dp_5" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                statusHeight="@{bool}"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100"
+                android:layout_margin="@dimen/dp_5"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{category.strCategory}"
+                    android:textColor="@color/color_044707"
+                    android:textSize="@dimen/sp_25"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="@{bool ? TextUtils.TruncateAt.START : TextUtils.TruncateAt.END  }"
+                    android:maxLines="@{bool ? 10 : 3}"
+                    android:text="@{category.strCategoryDescription}"
+                    android:textColor="@color/color_077FDD"
+                    android:textSize="@dimen/sp_18" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+</layout>

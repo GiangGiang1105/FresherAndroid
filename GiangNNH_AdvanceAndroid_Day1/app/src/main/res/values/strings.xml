@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GiangNNH_AdvanceAndroid_Day1</string>
+    <string name="error_network">Error NetWork</string>
+    <string name="error_code">Error Code: </string>
+</resources>

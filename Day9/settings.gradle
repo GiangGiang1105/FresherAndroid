@@ -1,0 +1,5 @@
+rootProject.name = "Day9"
+include ':app'
+include ':app2'
+include ':Lib'
+include ':Host'
