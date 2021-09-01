@@ -8,6 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
 import android.os.IBinder
+import android.util.Log
 import com.example.frand01_advandfinalth_giangnnh.IPMSSInterface
 import com.example.frand01_advandfinalth_giangnnh.R
 import com.example.frand01_advandfinalth_giangnnh.data.dao.ITireDefaultDao
@@ -55,6 +56,7 @@ class ServerService : Service() {
     }
 
     override fun onBind(intent: Intent?): IBinder {
+        Log.e(TAG, "onBind: ", )
         return binder
     }
 
@@ -68,6 +70,7 @@ class ServerService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        Log.e(TAG, "onStartCommand: ", )
         return START_STICKY
     }
 
@@ -91,6 +94,7 @@ class ServerService : Service() {
 
 
     companion object {
+        private const val TAG = "ServiceServer"
         private const val CHANNEL_ID = "TPMS Server"
         private const val ID_SERVICE_FOREGROUND = 10
     }
