@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.frand01_advandfinalth_giangnnh">
+    package="com.example.clientmessage">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <application
-        android:name=".app.ServerApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FRAND01_ADVandFinalTH_GiangNNH">
-
+        android:theme="@style/Theme.ClientMessage">
         <service
-            android:name=".service.ServerService"
+            android:name=".service.IPCMessengerClient"
             android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.example.frand01_advandfinalth_giangnnh.service.CONNECT_SERVER_TMPS" />
-            </intent-filter>
-        </service>
+            android:exported="false" />
+        <service
+            android:name=".service.IPCMessengerServer"
+            android:enabled="true"
+            android:exported="false" />
 
         <activity android:name=".MainActivity">
             <intent-filter>

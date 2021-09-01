@@ -2,12 +2,9 @@ package com.example.frand01_advandfinalth_giangnnh.data.model
 
 import android.os.Parcel
 import android.os.Parcelable
-import androidx.room.Entity
-import androidx.room.PrimaryKey
 
-@Entity(tableName = "TireDefault")
 data class TireDefault(
-    @PrimaryKey(autoGenerate = true) var id: Int = 0,
+   var id: Int = 0,
     var highPressure: Double = 0.0,
     var lowPressure: Double = 0.0,
     var highTemperature: Double = 0.0

@@ -2,12 +2,8 @@ package com.example.frand01_advandfinalth_giangnnh.data.model
 
 import android.os.Parcel
 import android.os.Parcelable
-import androidx.room.Entity
-import androidx.room.PrimaryKey
 
-@Entity(tableName = "TireSensor")
 class TireSensor(
-    @PrimaryKey(autoGenerate = true)
     var id: Int = 0,
     var id_type: String = "",
     var pressure: Double = 0.0,
