@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="StyleRecyclerView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_500</item>
+        <item name="android:layout_marginLeft">@dimen/dp_20</item>
+        <item name="android:layout_marginTop">@dimen/dp_30</item>
+        <item name="android:layout_marginRight">@dimen/dp_20</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="StyleTextName">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/teal_700</item>
+        <item name="android:textSize">@dimen/sp_25</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="StyleTextItemStudent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/teal_200</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="StyleTextViewAuth">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="StyleTextInputLayout" parent="StyleTextInputLayoutParent">
+        <item name="android:layout_marginLeft">@dimen/dp_30</item>
+        <item name="android:layout_marginRight">@dimen/dp_30</item>
+    </style>
+
+    <style name="StyleTextInputLayoutParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/color_C8CCCCCC</item>
+    </style>
+
+    <style name="StyleButton" parent="StyleButtonParent">
+        <item name="android:layout_marginLeft">@dimen/dp_30</item>
+        <item name="android:layout_marginTop">@dimen/dp_20</item>
+        <item name="android:layout_marginRight">@dimen/dp_30</item>
+        <item name="android:background">@drawable/bg_button_selector</item>
+    </style>
+
+    <style name="StyleButtonParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_22</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="StyleTextInputEditField">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/teal_700</item>
+    </style>
+
+    <style name="StyleSearchView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/dp_30</item>
+        <item name="android:layout_marginTop">@dimen/dp_10</item>
+        <item name="android:layout_marginRight">@dimen/dp_30</item>
+        <item name="android:background">@drawable/bg_search_view</item>
+    </style>
+</resources>

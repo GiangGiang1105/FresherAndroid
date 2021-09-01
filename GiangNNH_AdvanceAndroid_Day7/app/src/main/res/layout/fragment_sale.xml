@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data >
+        <variable
+            name="handler"
+            type="com.example.day7.screen.fragment.SaleFragment" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".screen.fragment.SaleFragment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/StyleTitleTextView"
+            android:text="@string/title_sale_product" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/holderNameTextField"
+            style="@style/StyleTextInputLayout"
+            android:layout_marginTop="@dimen/dp_50"
+            android:hint="@string/text_input_holder_name"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/color_368F8F"
+            app:hintTextColor="@color/color_368F8F">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/StyleTextInputEditField"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/amountTextField"
+            style="@style/StyleTextInputLayout"
+            android:layout_marginTop="@dimen/dp_10"
+            android:hint="@string/text_input_amount"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/color_368F8F"
+            app:hintTextColor="@color/color_368F8F">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/StyleTextInputEditField"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_30"
+            android:checkedButton="@id/radioVND"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioVND"
+                style="@style/StyleRadioButton"
+                android:text="@string/text_radio" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioUSD"
+                style="@style/StyleRadioButton"
+                android:text="@string/radio_usd" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSubmit"
+            style="@style/StyleButton"
+            android:onClick="@{handler::submitSale}"
+            android:text="@string/text_button_submit" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

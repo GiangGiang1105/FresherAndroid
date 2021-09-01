@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AppGraph</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_column_chart">Column Chart</string>
+    <string name="title_pie_chart">Pie Chart</string>
+    <string name="title_column_chart_view">Column Chart View</string>
+    <string name="text_item_1">Item 1</string>
+    <string name="text_item_2">Item 2</string>
+    <string name="text_item_3">Item 3</string>
+    <string name="text_item_4">Item 4</string>
+    <string name="text_item_5">Item 5</string>
+    <string name="title_pie_chart_view">Pie Chart View</string>
+</resources>

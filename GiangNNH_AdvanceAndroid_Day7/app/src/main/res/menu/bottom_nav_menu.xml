@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/saleFragment"
+        android:icon="@drawable/ic_sale"
+        android:title="@string/title_sale"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/refundFragment"
+        android:icon="@drawable/ic_refund"
+        android:title="@string/title_refund"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/revenueFragment"
+        android:icon="@drawable/ic_revenue"
+        android:title="@string/title_revenue"
+        app:showAsAction="always"/>
+</menu>

@@ -6,8 +6,6 @@ import com.example.day6.databinding.FragmentSignUpBinding
 
 class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
 
-    private lateinit var signUpBinding: FragmentSignUpBinding
-
     override fun getViewBinding(layoutInflater: LayoutInflater): FragmentSignUpBinding =
         FragmentSignUpBinding.inflate(layoutInflater)
 
@@ -21,7 +19,6 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
             val password = binding.passwordTextField.editText?.text.toString()
             val action =
                 SignUpFragmentDirections.actionSignUpFragment2ToSignInFragment2(phone, password)
-
             controller.navigate(action)
         }
     }

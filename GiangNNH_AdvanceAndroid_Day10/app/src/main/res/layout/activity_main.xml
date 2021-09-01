@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="weatherData"
+            type="com.example.giangnnh_advanceandroid_day10.data.model.weather.WeatherData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_weather"
+        tools:context=".screen.MainActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginHorizontal="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:alpha="0.3"
+            android:background="@drawable/bg_app_bar"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchWeather"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="@dimen/dp_30"
+                android:paddingVertical="@dimen/dp_10"
+                android:textColor="@color/white"
+                app:queryHint="@string/hint_text_city">
+
+            </androidx.appcompat.widget.SearchView>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:fontFamily="sans-serif-thin"
+            android:text="@{@string/name_city(weatherData.name, weatherData.sys.country )}"
+            android:textColor="@color/color_DFDBDB"
+            android:textSize="@dimen/sp_35"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+        <ImageView
+            android:id="@+id/appCompatImageView"
+            set_url="@{weatherData.weather[0].icon}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_50"
+            app:layout_constraintEnd_toStartOf="@id/mainWeather"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mainWeather"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="@{weatherData.weather.get(0).main}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_40"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView"
+            app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+            app:layout_constraintTop_toTopOf="@+id/appCompatImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@{weatherData.main.roundTemp(weatherData.main.temp)}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_60"
+            app:layout_constraintRight_toLeftOf="@+id/linear"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appCompatImageView" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_100"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/textTemperature"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textTemperature"
+            app:layout_constraintTop_toTopOf="@+id/textTemperature">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_line"
+                android:text="@{weatherData.main.roundTemp(weatherData.main.temp_max)}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_30" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{weatherData.main.roundTemp(weatherData.main.temp_min)}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_30" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:background="@drawable/bg_linearlayout"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10"
+            app:layout_constraintBottom_toTopOf="@+id/linear4"
+            app:layout_constraintEnd_toStartOf="@+id/linear3"
+            app:layout_constraintStart_toEndOf="@+id/linear2"
+            app:layout_constraintTop_toBottomOf="@+id/linear">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_wind" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/text_wind"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@{@string/wind_city(weatherData.wind.getSpeed(weatherData.wind.speed))}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:background="@drawable/bg_linearlayout"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10"
+            app:layout_constraintBottom_toBottomOf="@+id/linear1"
+            app:layout_constraintEnd_toStartOf="@+id/linear1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linear1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_temperature" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/text_feels_like"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@{weatherData.main.roundTemp(weatherData.main.feels_like)}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:background="@drawable/bg_linearlayout"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10"
+            app:layout_constraintBottom_toBottomOf="@+id/linear1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linear1"
+            app:layout_constraintTop_toTopOf="@+id/linear1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_humidity" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/text_humidity"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@{@string/humidity(String.valueOf(weatherData.main.humidity)) }"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_5"
+            android:background="@drawable/bg_linearlayout"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10"
+            app:layout_constraintEnd_toStartOf="@+id/linear6"
+            app:layout_constraintStart_toEndOf="@+id/linear5"
+            app:layout_constraintTop_toBottomOf="@+id/linear1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_cloud" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/text_cloud"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@{@string/clouds(String.valueOf(weatherData.clouds.all))}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:background="@drawable/bg_linearlayout"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10"
+            app:layout_constraintBottom_toBottomOf="@+id/linear4"
+            app:layout_constraintEnd_toStartOf="@+id/linear4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linear4">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_pressure" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/text_pressure"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@{@string/pressure(String.valueOf(weatherData.main.pressure))}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:background="@drawable/bg_linearlayout"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10"
+            app:layout_constraintBottom_toBottomOf="@+id/linear4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linear4"
+            app:layout_constraintTop_toTopOf="@+id/linear4">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_visibility" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/text_visibility"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@{@string/visibility(String.valueOf(weatherData.visibility/1000))}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ProgressBar
+            android:id="@+id/processLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

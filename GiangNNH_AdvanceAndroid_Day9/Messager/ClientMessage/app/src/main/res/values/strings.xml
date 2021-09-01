@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ClientMessage</string>
+    <string name="text_button_start_server">Start Server</string>
+    <string name="text_button_start_communication">Start Communicate</string>
+    <string name="text_button_stop_server">Stop Server</string>
+    <string name="text_button_start_client">Start Client</string>
+    <string name="text_button_stop_communication">Stop Communicate</string>
+    <string name="text_button_stop_client">Stop Client</string>
+</resources>

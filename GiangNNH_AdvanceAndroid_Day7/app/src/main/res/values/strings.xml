@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">GiangNNH_AdvanceAndroid_Day7</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_refund">Refund</string>
+    <string name="title_revenue">Revenue</string>
+    <string name="title_sale">Sale</string>
+    <string name="title_layout_refund">Customers want a refund???</string>
+    <string name="text_input_holder_name">Holder Name</string>
+    <string name="title_sale_product">Sale Product</string>
+    <string name="text_radio">VND</string>
+    <string name="radio_usd">USD</string>
+    <string name="text_input_amount">Amount</string>
+    <string name="text_button_submit">Submit</string>
+    <string name="label_refund">Refund</string>
+    <string name="label_revenue">Revenue</string>
+    <string name="label_sale">Sale</string>
+    <string name="hint_query_search">Search by holder name</string>
+    <string name="title_refund_product">Refund Product</string>
+    <string name="title_transactions">Transactions</string>
+    <string name="title_text_amount">Amount</string>
+    <string name="title_text_currency">Currency</string>
+    <string name="title_text_time">Time</string>
+    <string name="title_text_type">Type:</string>
+    <string name="text_button_cancel">Cancel</string>
+    <string name="text_button_refund">Refund</string>
+    <string name="text_filter">Filter</string>
+</resources>

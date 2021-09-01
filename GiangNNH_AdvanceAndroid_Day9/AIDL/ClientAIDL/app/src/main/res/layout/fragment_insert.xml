@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screen.fragment.InsertFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameTextField"
+        style="@style/StyleTextInputLayoutParent"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_10"
+        android:hint="@string/hint_name_student"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/teal_700"
+        app:hintTextColor="@color/teal_700">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/StyleTextInputEditField"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ageStudentTextField"
+            style="@style/StyleTextInputLayoutParent"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_weight="1"
+            android:hint="@string/hint_age_student"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/teal_700"
+            app:hintTextColor="@color/teal_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/StyleTextInputEditField"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mathTextField"
+            style="@style/StyleTextInputLayoutParent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="1"
+            android:hint="@string/hint_score_math"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/teal_700"
+            app:hintTextColor="@color/teal_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/StyleTextInputEditField"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_10">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/physicalTextField"
+            style="@style/StyleTextInputLayoutParent"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_weight="1"
+            android:hint="@string/hint_score_physical"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/teal_700"
+            app:hintTextColor="@color/teal_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/StyleTextInputEditField"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/chemistryTextField"
+            style="@style/StyleTextInputLayoutParent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="1"
+            android:hint="@string/hint_score_chemistry"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/teal_700"
+            app:hintTextColor="@color/teal_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/StyleTextInputEditField"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_10">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/englishTextField"
+            style="@style/StyleTextInputLayoutParent"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_weight="1"
+            android:hint="@string/hint_score_english"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/teal_700"
+            app:hintTextColor="@color/teal_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/StyleTextInputEditField"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/literatureTextField"
+            style="@style/StyleTextInputLayoutParent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="1"
+            android:hint="@string/hint_score_literature"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/teal_700"
+            app:hintTextColor="@color/teal_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/StyleTextInputEditField"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAdd"
+        style="@style/StyleButton"
+        android:text="@string/button_add_student" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+

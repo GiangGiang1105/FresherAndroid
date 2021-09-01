@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GiangNNH_AdvanceAndroid_Day10</string>
+    <string name="hint_text_city">City</string>
+    <string name="temperature">%s<sup>o</sup>C</string>
+    <string name="temperature_main">%s <sup>o</sup></string>
+    <string name="name_city">%1$s, %2$s</string>
+    <string name="wind_city">%skm/h</string>
+    <string name="humidity">%1$s%%</string>
+    <string name="clouds">%1$s%%</string>
+    <string name="pressure">%shPa</string>
+    <string name="visibility">%skm</string>
+    <string name="text_feels_like">Feels like</string>
+    <string name="text_wind">Wind</string>
+    <string name="text_humidity">Humidity</string>
+    <string name="text_pressure">Pressure</string>
+    <string name="text_visibility">Visibility</string>
+    <string name="text_cloud">Clouds</string>
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="com.example.day7.screen.fragment.TransactionDialog" />
+
+        <variable
+            name="transaction"
+            type="com.example.day7.data.model.Transaction" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:backgroundTint="@color/black">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/holderName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{transaction.holderName}"
+                android:textColor="@color/teal_700"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/title_text_type"
+                        android:textColor="@color/color_F1AEAE"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@{transaction.type}"
+                        android:textColor="@color/color_F1AEAE"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="italic" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/title_text_amount"
+                        android:textColor="@color/color_F1AEAE"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@{String.valueOf(transaction.amount)  + transaction.currency}"
+                        android:textColor="@color/color_F1AEAE"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="italic" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/title_text_time"
+                        android:textColor="@color/color_F1AEAE"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@{transaction.getDateTime()}"
+                        android:textColor="@color/color_F1AEAE"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="italic" />
+                </TableRow>
+
+            </TableLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonCancel"
+                    style="@style/StyleButtonDialog"
+                    android:onClick="@{handler::onCancel}"
+                    android:text="@string/text_button_cancel" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRefund"
+                    style="@style/StyleButtonDialog"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:onClick="@{handler::onRefund}"
+                    android:text="@string/text_button_refund" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+</layout>

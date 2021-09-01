@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ServerAIDL</string>
+    <string name="message_insert_success">Insert successful!</string>
+    <string name="message_insert_error">Insert error!</string>
+    <string name="message_update_success">Update successful!</string>
+    <string name="message_update_error">Update error!</string>
+    <string name="message_delete_success">Delete successful!</string>
+    <string name="message_delete_error">Delete error!</string>
+    <string name="messgae_student_null">Student is null, Server can\'t confirm this task! Please....</string>
+</resources>

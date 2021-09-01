@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="21461f46-6cd0-452f-b630-a13e89becf12" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/app/TransactionApp.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/base/BaseActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/base/BaseFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/data/database/TransactionDatabase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/data/database/dao/TransactionDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/data/repository/TransactionRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/di/DatabaseModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/screen/adapter/TransactionAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/screen/fragment/RefundFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/screen/fragment/RevenueFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/screen/fragment/SaleFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/screen/fragment/TransactionDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/utils/Constants.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/utils/Currency.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/utils/DiffUtilsCallback.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/utils/TransactionType.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/utils/ValidateResult.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/utils/ValidateTransaction.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/java/com/example/day7/viewmodel/MainViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/res/color/icons_bottom_nav_color.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/res/drawable/bg_button_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/res/drawable/bg_search_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/res/drawable/ic_plus.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/res/drawable/ic_refund.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/res/drawable/ic_revenue.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/res/layout/custom_dialog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/res/layout/fragment_refund.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/res/layout/fragment_revenue.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/res/layout/fragment_sale.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/res/layout/item_transaction.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/res/navigation/navigation_graph.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day7/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/androidTest/java/com/example/appgraph/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/java/com/example/appgraph/app/MyApplication.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/java/com/example/appgraph/base/BaseRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/java/com/example/appgraph/data/datasource/MyChartDataSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/java/com/example/appgraph/data/model/ColumnChart.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/java/com/example/appgraph/data/model/PieChart.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/java/com/example/appgraph/data/repository/ChartRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/java/com/example/appgraph/di/DataModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/java/com/example/appgraph/screen/activity/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/java/com/example/appgraph/screen/fragment/ColumnChartFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/java/com/example/appgraph/screen/fragment/PieChartFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/java/com/example/appgraph/utils/ChartContract.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/java/com/example/appgraph/viewmodel/MainViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/color/icons_bottom_nav_color.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/layout/fragment_column_chart.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/layout/fragment_pie_chart.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/menu/menu_bottom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/navigation/navigation_graph.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/app/src/test/java/com/example/appgraph/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/AppGraph/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/Appdata/app/src/main/java/com/example/myapplication/data/dao/ChartDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/Appdata/app/src/main/java/com/example/myapplication/data/database/ChartDatabase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/Appdata/app/src/main/java/com/example/myapplication/data/model/ColumnChart.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/Appdata/app/src/main/java/com/example/myapplication/data/model/PieChart.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/Appdata/app/src/main/java/com/example/myapplication/di/ContentProviderEntryPoint.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/Appdata/app/src/main/java/com/example/myapplication/di/DatabaseModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/Appdata/app/src/main/java/com/example/myapplication/provider/ChartContract.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/Appdata/app/src/main/java/com/example/myapplication/provider/ChartProvider.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/Appdata/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day8/Appdata/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/aidl/com/example/serveraidl/IStudentBinder.aidl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/aidl/com/example/serveraidl/data/model/Student.aidl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/app/MyApplication.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/base/BaseFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/base/BaseRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/data/datasource/StudentDataSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/data/repository/StudentRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/di/DataModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/screen/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/screen/adapter/StudentDiffUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/screen/adapter/StudentRecyclerAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/screen/fragment/InsertFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/screen/fragment/StudentsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/screen/fragment/UpdateFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/utils/Resource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/utils/ValidateForm.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/clientaidl/viewmodel/MainViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/java/com/example/serveraidl/data/model/Student.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/res/drawable/bg_button.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/res/drawable/bg_button_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/res/drawable/bg_button_state_normal.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/res/drawable/bg_button_state_pressed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/res/drawable/bg_search_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/res/layout/fragment_insert.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/res/layout/fragment_students.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/res/layout/fragment_update.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/res/layout/item_student.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/res/menu/menu_toolbar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/res/navigation/navigation_graph.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ClientAIDL/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ServerAIDL/app/src/main/aidl/com/example/serveraidl/IStudentBinder.aidl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ServerAIDL/app/src/main/aidl/com/example/serveraidl/data/model/Student.aidl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ServerAIDL/app/src/main/java/com/example/serveraidl/app/MyApplication.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ServerAIDL/app/src/main/java/com/example/serveraidl/data/dao/IStudentDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ServerAIDL/app/src/main/java/com/example/serveraidl/data/database/StudentDatabase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ServerAIDL/app/src/main/java/com/example/serveraidl/data/model/Student.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ServerAIDL/app/src/main/java/com/example/serveraidl/di/DatabaseModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/AIDL/ServerAIDL/app/src/main/java/com/example/serveraidl/service/ServerService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/androidTest/java/com/example/clientmessage/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/java/com/example/clientmessage/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/java/com/example/clientmessage/service/IPCMessengerClient.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/java/com/example/clientmessage/service/IPCMessengerServer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/app/src/test/java/com/example/clientmessage/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day9/Messager/ClientMessage/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day6/app/src/main/java/com/example/day6/screen/authentication/fragment/SignUpFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day6/app/src/main/java/com/example/day6/screen/authentication/fragment/SignUpFragment.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1xLV0cMUgHri7VCuYG7OXrXLUq0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/GiangNNH_AdvanceAndroid_Day10" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.giangnnh_advanceandroid_day10.data.model.weather" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="GiangNNH_AdvanceAndroid_Day10.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21461f46-6cd0-452f-b630-a13e89becf12" name="Default Changelist" comment="" />
+      <created>1630134135048</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630134135048</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1630138739322">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1630138739322" />
+    <state x="319" y="3" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1630139303145">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="319" y="3" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1630139303145" />
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1630140176130">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1630140176130" />
+    <state x="184" y="14" key="SettingsEditor" timestamp="1630138426402">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="184" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1630138426402" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/giangnnh_advanceandroid_day10/MainActivity.kt</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

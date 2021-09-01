@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screen.fragment.ColumnChartFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/StyleTitleView"
+        android:text="@string/title_column_chart_view" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_250"
+        android:layout_marginTop="@dimen/dp_10" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <View
+            android:id="@+id/viewOne"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/StyleTextTitleValue"
+            android:text="@string/text_item_1" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekBarOne"
+            style="@style/StyleTextSeekBar" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <View
+            android:id="@+id/viewTwo"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/StyleTextTitleValue"
+            android:text="@string/text_item_2" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekBarTwo"
+            style="@style/StyleTextSeekBar" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <View
+            android:id="@+id/viewThree"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/StyleTextTitleValue"
+            android:text="@string/text_item_3" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekBarThree"
+            style="@style/StyleTextSeekBar" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <View
+            android:id="@+id/viewFour"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/StyleTextTitleValue"
+            android:text="@string/text_item_4" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekBarFour"
+            style="@style/StyleTextSeekBar" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <View
+            android:id="@+id/viewFive"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/StyleTextTitleValue"
+            android:text="@string/text_item_5" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekBarFive"
+            style="@style/StyleTextSeekBar" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>
