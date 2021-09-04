@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/observerFragment"
+        android:title="@string/title_observer"
+        />
+
+    <item
+        android:id="@+id/configFragment"
+        android:title="@string/title_config" />
+</menu>
