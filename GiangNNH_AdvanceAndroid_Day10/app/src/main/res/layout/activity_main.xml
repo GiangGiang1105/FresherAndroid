@@ -29,16 +29,14 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.appcompat.widget.SearchView
+            <AutoCompleteTextView
                 android:id="@+id/searchWeather"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingHorizontal="@dimen/dp_30"
                 android:paddingVertical="@dimen/dp_10"
                 android:textColor="@color/white"
-                app:queryHint="@string/hint_text_city">
-
-            </androidx.appcompat.widget.SearchView>
+                app:queryHint="@string/hint_text_city" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -55,13 +53,13 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/appCompatImageView"
             set_url="@{weatherData.weather[0].icon}"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_50"
-            android:layout_marginTop="@dimen/dp_50"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_30"
             app:layout_constraintEnd_toStartOf="@id/mainWeather"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
@@ -71,6 +69,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_10"
+            android:fontFamily="sans-serif-thin"
             android:text="@{weatherData.weather.get(0).main}"
             android:textColor="@color/white"
             android:textSize="@dimen/sp_40"
@@ -106,6 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_bottom_line"
+                android:fontFamily="sans-serif-thin"
                 android:text="@{weatherData.main.roundTemp(weatherData.main.temp_max)}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_30" />
@@ -113,6 +113,7 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-thin"
                 android:text="@{weatherData.main.roundTemp(weatherData.main.temp_min)}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_30" />
@@ -123,7 +124,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_5"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="@dimen/dp_30"
             android:layout_marginEnd="@dimen/dp_5"
             android:background="@drawable/bg_linearlayout"
             android:orientation="vertical"
@@ -144,6 +145,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="sans-serif-thin"
                 android:text="@string/text_wind"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20" />
@@ -153,6 +155,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="sans-serif-thin"
                 android:text="@{@string/wind_city(weatherData.wind.getSpeed(weatherData.wind.speed))}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20" />
@@ -184,6 +187,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="sans-serif-thin"
                 android:text="@string/text_feels_like"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20" />
@@ -193,6 +197,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="sans-serif-thin"
                 android:text="@{weatherData.main.roundTemp(weatherData.main.feels_like)}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20" />
@@ -223,6 +228,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="sans-serif-thin"
                 android:text="@string/text_humidity"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20" />
@@ -232,6 +238,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="sans-serif-thin"
                 android:text="@{@string/humidity(String.valueOf(weatherData.main.humidity)) }"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20" />
@@ -263,6 +270,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="sans-serif-thin"
                 android:text="@string/text_cloud"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20" />
@@ -272,6 +280,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="sans-serif-thin"
                 android:text="@{@string/clouds(String.valueOf(weatherData.clouds.all))}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20" />
@@ -302,6 +311,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="sans-serif-thin"
                 android:text="@string/text_pressure"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20" />
@@ -311,6 +321,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="sans-serif-thin"
                 android:text="@{@string/pressure(String.valueOf(weatherData.main.pressure))}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20" />
@@ -341,6 +352,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="sans-serif-thin"
                 android:text="@string/text_visibility"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20" />
@@ -350,6 +362,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="sans-serif-thin"
                 android:text="@{@string/visibility(String.valueOf(weatherData.visibility/1000))}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20" />

@@ -1,0 +1,3 @@
+rootProject.name = "ConnectorLib"
+include ':app'
+include ':ConnectorLibrary'

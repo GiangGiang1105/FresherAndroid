@@ -40,6 +40,7 @@ class MyChartDataSource(context: Context) {
                     getDouble(getColumnIndex(ChartContract.PieChartEntry.COLUMN_VALUE_3))
                 result.value_4 =
                     getDouble(getColumnIndex(ChartContract.PieChartEntry.COLUMN_VALUE_4))
+                close()
             }
             return result
         }

@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">TPMSClient</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_observer">Observer</string>
+    <string name="title_config">Config</string>
+    <string name="mess_high_pressure">High pressure</string>
+    <string name="mess_low_pressure">Low pressure</string>
+    <string name="mess_high_temperature">High temperature</string>
+    <string name="mess_observer"></string>
+    <string name="pressure">%s Kg</string>
+    <string name="temperature">%s <sup>o</sup>C</string>
 </resources>

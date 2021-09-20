@@ -1,6 +1,7 @@
 package com.example.aidllibrary.controller
 
 import android.content.Context
+import android.util.Log
 import com.example.aidllibrary.base.CallbackProvider
 import com.example.aidllibrary.entity.FailureResponse
 import com.example.aidllibrary.entity.Student
@@ -23,7 +24,7 @@ class StudentServiceController(context: Context) : StudentServiceConnector.Callb
     override fun addCallback(callback: StudentServiceConnector.Callback) {
         super.addCallback(callback)
         if (callbacks.size > 0) {
-
+            connect()
         }
     }
 
@@ -59,16 +60,22 @@ class StudentServiceController(context: Context) : StudentServiceConnector.Callb
     }
 
     override fun onStudentServiceConnected() {
+        Log.e("TAG", "onStudentServiceConnected: 1", )
+        Log.e("TAG", "onStudentServiceConnected: 2 ${callbacks.size}", )
         coroutineScope.launch {
             callbacks.forEach {
+                Log.e("TAG", "onStudentServiceConnected: 3 ${callbacks.size}", )
                 it.onStudentServiceConnected()
             }
         }
     }
 
     override fun onGetAllStudentResponse(response: StudentResponse) {
+        Log.e("TAG", "onGetAllStudentResponse: 1", )
+        Log.e("TAG", "onGetAllStudentResponse: 3 ${callbacks.size}", )
         coroutineScope.launch {
             callbacks.forEach {
+                Log.e("TAG", "onGetAllStudentResponse: 2", )
                 it.onGetAllStudentResponse(response)
             }
         }

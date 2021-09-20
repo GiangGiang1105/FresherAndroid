@@ -10,6 +10,7 @@ import com.example.myapplication.data.model.PieChart
 import com.example.myapplication.di.ContentProviderEntryPoint
 import dagger.hilt.android.EntryPointAccessors
 import java.lang.IllegalArgumentException
+import java.lang.IllegalStateException
 
 class ChartProvider : ContentProvider() {
 
@@ -36,6 +37,12 @@ class ChartProvider : ContentProvider() {
         )
     }
 
+    private val mContext by lazy {
+        context?.applicationContext ?: throw IllegalStateException("Not find context!")
+    }
+    private val chartItemDao by lazy { getDao(mContext) }
+    private val contentResolver by lazy { mContext.contentResolver }
+
     override fun onCreate(): Boolean {
         return true
     }
@@ -47,18 +54,15 @@ class ChartProvider : ContentProvider() {
         selectionArgs: Array<out String>?,
         sortOrder: String?
     ): Cursor? {
-        val chartItemDao = getDao(appContext = context?.applicationContext)
-        val code = uriMatcher.match(uri)
         val cursor: Cursor?
-        if (context == null) return null
-        when (code) {
+        when (uriMatcher.match(uri)) {
             ChartContract.ColumnChartEntry.ALL_ITEMS -> {
                 cursor = chartItemDao.getAllColumnChartItem()
-                cursor.setNotificationUri(context?.contentResolver, uri)
+                cursor.setNotificationUri(contentResolver, uri)
             }
             ChartContract.PieChartEntry.ALL_ITEMS -> {
                 cursor = chartItemDao.getAllPieChartItem()
-                cursor.setNotificationUri(context?.contentResolver, uri)
+                cursor.setNotificationUri(contentResolver, uri)
             }
             ChartContract.ColumnChartEntry.ONE_ITEM, ChartContract.PieChartEntry.ONE_ITEM -> throw IllegalArgumentException(
                 "Invalid URI, cannot query with ID: $uri"
@@ -79,28 +83,28 @@ class ChartProvider : ContentProvider() {
         }
 
     override fun insert(uri: Uri, values: ContentValues?): Uri {
-        val chartItemDao = getDao(appContext = context?.applicationContext)
-        when (uriMatcher.match(uri)) {
+        return when (uriMatcher.match(uri)) {
             ChartContract.ColumnChartEntry.ALL_ITEMS -> {
                 val id = chartItemDao.insertColumnChart(ColumnChart.fromContentValues(values))
-                context?.contentResolver?.notifyChange(uri, null)
-                return ContentUris.withAppendedId(uri, id)
+                contentResolver.notifyChange(uri, null)
+                if (id < 1) throw IllegalArgumentException("Failure to insert with $uri ")
+                ContentUris.withAppendedId(uri, id)
             }
             ChartContract.PieChartEntry.ALL_ITEMS -> {
                 val id = chartItemDao.insertPieChart(PieChart.fromContentValues(values))
-                context?.contentResolver?.notifyChange(uri, null)
-                return ContentUris.withAppendedId(uri, id)
+                contentResolver.notifyChange(uri, null)
+                if (id < 1) throw IllegalArgumentException("Failure to insert with $uri ")
+                ContentUris.withAppendedId(uri, id)
             }
             ChartContract.PieChartEntry.ONE_ITEM, ChartContract.ColumnChartEntry.ONE_ITEM -> throw IllegalArgumentException(
                 "Invalid URI, cannot insert with ID: $uri"
             )
-
             else -> throw IllegalArgumentException("Unknown URI: $uri")
         }
     }
 
     override fun delete(uri: Uri, selection: String?, selectionArgs: Array<out String>?): Int {
-        throw IllegalArgumentException("Invalid URI, cannot update with: $uri")
+        throw IllegalArgumentException("Invalid URI, cannot delete with: $uri")
     }
 
     override fun update(
@@ -109,29 +113,26 @@ class ChartProvider : ContentProvider() {
         selection: String?,
         selectionArgs: Array<out String>?
     ): Int {
-        val chartItemDao = getDao(appContext = context?.applicationContext)
         val count: Int
         when (uriMatcher.match(uri)) {
             ChartContract.PieChartEntry.ALL_ITEMS -> {
                 val pieChart = PieChart.fromContentValues(
                     values
                 )
-                count = chartItemDao.updatePieChart(
-                    pieChart
-                )
+                count = chartItemDao.updatePieChart(pieChart)
+                if (count <= 0) throw IllegalArgumentException("Failure to update with $uri ")
             }
             ChartContract.ColumnChartEntry.ALL_ITEMS -> {
                 val columnChart = ColumnChart.fromContentValues(values)
-                count = chartItemDao.updateColumnChart(
-                    columnChart
-                )
+                count = chartItemDao.updateColumnChart(columnChart)
+                if (count <= 0) throw IllegalArgumentException("Failure to update with $uri ")
             }
             ChartContract.ColumnChartEntry.ONE_ITEM, ChartContract.PieChartEntry.ONE_ITEM -> throw IllegalArgumentException(
                 "Invalid URI, cannot delete with ID: $uri"
             )
             else -> throw IllegalArgumentException("Unknown URI: $uri")
         }
-        context?.contentResolver?.notifyChange(uri, null)
+        contentResolver.notifyChange(uri, null)
         return count
     }
 

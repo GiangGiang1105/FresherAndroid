@@ -5,6 +5,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.*
 import android.util.Log
+import androidx.core.os.bundleOf
+import com.example.clientmessage.Constants
 import com.example.clientmessage.MainActivity
 import com.example.clientmessage.R
 
@@ -12,34 +14,56 @@ class IPCMessengerClient : Service() {
 
     private val mHandler = object : Handler(Looper.getMainLooper()) {
         override fun handleMessage(msg: Message) {
-            val keyStop = msg.data.getInt(KEY_RECEIVE_STOP)
-            if (keyStop == KEY_STOP) {
-                stopMessener()
-            } else {
-                val msgValue = msg.data.getString(KEY_RECEIVE)
-                Log.d(TAG, "Receive Message: $msgValue")
-                postDelayed({
-                    sendData()
-                }, 5000)
+            when (msg.what) {
+                Constants.START_COMMUNICATE -> {
+                    sendData(msg, this)
+                }
+                Constants.FROM_SERVER -> {
+                    val value = msg.data.getString(Constants.VALUE)
+                    Log.d(TAG, "Receive value from server : $value")
+                    sendData(msg, this)
+                }
+                Constants.STOP_CLIENT -> {
+                    stopClientMessener()
+                }
             }
         }
     }
 
     private val messenger = Messenger(mHandler)
-    private var messengerServer: Messenger? = null
-
-    fun initMessengerServer(messenger: Messenger) {
-        messengerServer = messenger
-    }
 
     override fun onBind(intent: Intent): IBinder = messenger.binder
 
-    override fun onUnbind(intent: Intent?): Boolean {
-        return super.onUnbind(intent)
-    }
-
     override fun onCreate() {
         startForeground(ID_SERVICE_FOREGROUND, createNotification())
+    }
+
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        when (intent?.action) {
+            ACTION_STOP -> {
+                stopClientMessener()
+            }
+            else -> throw IllegalArgumentException("No action!!!")
+        }
+        return START_STICKY
+    }
+
+    fun sendData(msg: Message, handler: Handler) {
+        val mServer = msg.replyTo
+        val key = (0..5).random()
+        val message = Message.obtain().apply {
+            data = bundleOf(Constants.KEY to key)
+            what = Constants.TO_SERVER
+            replyTo = messenger
+        }
+        handler.postDelayed({ mServer.send(message) }, 5000)
+        Log.d(TAG, "Send to server: $key")
+    }
+
+    private fun stopClientMessener() {
+        mHandler.removeCallbacksAndMessages(null)
+        stopForeground(true)
+        stopSelf()
     }
 
     private fun createNotification(): Notification {
@@ -67,49 +91,10 @@ class IPCMessengerClient : Service() {
             .build()
     }
 
-    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        when (intent?.action) {
-            ACTION_STOP -> {
-                stopMessener()
-            }
-            else -> throw IllegalArgumentException("No action!!!")
-        }
-        return START_STICKY
-    }
-
-    fun sendData() {
-        val key = (0..5).random()
-        val bundle = Bundle().apply {
-            putInt(KEY_SEND, key)
-        }
-        Message.obtain().apply {
-            data = bundle
-            messengerServer?.send(this)
-            replyTo = messenger
-        }
-        Log.d(TAG, "sendMessage: $key")
-    }
-
-    private fun stopMessener() {
-        mHandler.removeCallbacksAndMessages(null)
-        stopForeground(true)
-        stopSelf()
-    }
-
     companion object {
-        private const val TAG = "IPCMessengerClient"
-        private const val KEY_STOP = 100
-        private const val KEY_RECEIVE = "VALUE"
-        private const val KEY_RECEIVE_STOP = "STOP"
-        private const val KEY_SEND = "KEY"
+        private const val TAG = "IPC Client"
         private const val CHANNEL_ID = "IPC Client"
         private const val ACTION_STOP = "Stop Client"
         private const val ID_SERVICE_FOREGROUND = 10
-
-        private var instance: IPCMessengerClient? = null
-
-        fun getInstance(): IPCMessengerClient = instance ?: IPCMessengerClient().also {
-            instance = it
-        }
     }
 }

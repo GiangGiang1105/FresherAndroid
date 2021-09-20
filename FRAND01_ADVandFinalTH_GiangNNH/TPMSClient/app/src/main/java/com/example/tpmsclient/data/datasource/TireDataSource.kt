@@ -34,7 +34,9 @@ class TireDataSource(private val context: Context) {
 
     fun connectServer() {
         Log.e(TAG, "connectServer: ", )
-        context.bindService(intentService, connection, Context.BIND_AUTO_CREATE)
+        if (isBinder) {
+            context.bindService(intentService, connection, Context.BIND_AUTO_CREATE)
+        }
     }
 
     fun getTireDefault(): TireDefault? {

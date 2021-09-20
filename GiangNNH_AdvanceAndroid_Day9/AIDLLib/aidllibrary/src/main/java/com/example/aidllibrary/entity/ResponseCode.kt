@@ -2,7 +2,7 @@ package com.example.aidllibrary.entity
 
 @Suppress("UNUSED")
 @Retention(AnnotationRetention.SOURCE)
-annotation class ResponseCode {
+annotation class    ResponseCode {
 
     companion object {
         const val ERROR_INSERT = -1

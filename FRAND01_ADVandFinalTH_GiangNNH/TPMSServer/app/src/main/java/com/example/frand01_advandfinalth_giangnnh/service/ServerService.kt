@@ -33,6 +33,7 @@ class ServerService : Service() {
         }
 
         override fun insertTireDefault(tireDefault: TireDefault): Long {
+            Log.e(TAG, "insertTireDefault: ", )
             return tireDefaultDao.insertTireDefault(tireDefault)
         }
 
@@ -66,7 +67,7 @@ class ServerService : Service() {
     }
 
     override fun onCreate() {
-        startForeground(ID_SERVICE_FOREGROUND, createNotification())
+       /* startForeground(ID_SERVICE_FOREGROUND, createNotification())*/
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {

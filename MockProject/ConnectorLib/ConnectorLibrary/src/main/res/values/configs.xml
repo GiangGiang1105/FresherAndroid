@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Server service component-->
+    <string name="action_server_service">com.ecom.example.serverapp.server.service.CONNECT_SERVER_DATABASE</string>
+    <string name="component_server_service">com.example.serverapp/.server.service.ServerService</string>
+</resources>

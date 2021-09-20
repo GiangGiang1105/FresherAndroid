@@ -18,7 +18,7 @@ import com.example.aidllibrary.entity.StudentResponse
  * @since 1.0
  */
 
-class StudentServiceConnector private constructor(private val context: Context) {
+class   StudentServiceConnector private constructor(private val context: Context) {
 
     var serviceConnected = false
     private var studentService: IStudentService? = null
@@ -49,6 +49,7 @@ class StudentServiceConnector private constructor(private val context: Context) 
     private val studentServiceCallback = object : IStudentServiceCallback.Stub() {
 
         override fun onGetAllStudentResponse(response: StudentResponse) {
+            Log.e(TAG, "onGetAllStudentResponse: hhhhhahhhahhhhhh", )
             callback?.onGetAllStudentResponse(response)
         }
 
@@ -146,7 +147,7 @@ class StudentServiceConnector private constructor(private val context: Context) 
         serviceConnected = false
     }
 
-    class Builder(context: Context) {
+    class Builder(context: Context) :StudentServiceConnector{
 
         private val connectorClient = StudentServiceConnector(context)
 

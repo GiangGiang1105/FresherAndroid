@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation_graph">
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/observerFragment">
 
+    <fragment
+        android:id="@+id/configFragment"
+        android:name="com.example.tpmsclient.view.fragment.ConfigFragment"
+        android:label="ConfigFragment" >
+        <action
+            android:id="@+id/action_configFragment_to_observerFragment"
+            app:destination="@id/observerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/observerFragment"
+        android:name="com.example.tpmsclient.view.fragment.ObserverFragment"
+        android:label="ObserverFragment" >
+        <action
+            android:id="@+id/action_observerFragment_to_configFragment"
+            app:destination="@id/configFragment" />
+    </fragment>
 </navigation>

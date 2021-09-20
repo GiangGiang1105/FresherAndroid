@@ -58,7 +58,6 @@ class PieChartFragment : Fragment() {
                 initBuildChart(pieChart)
                 updateSeekBar(pieChart)
             }
-            Log.e("TAG", "initData: $it", )
         })
     }
 

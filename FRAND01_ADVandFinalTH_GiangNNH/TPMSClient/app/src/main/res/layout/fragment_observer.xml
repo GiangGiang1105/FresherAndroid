@@ -1,14 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ObserverFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+        <variable
+            name="tireDefaut"
+            type="com.example.frand01_advandfinalth_giangnnh.data.model.TireDefault" />
+
+        <variable
+            name="tireSensorOne"
+            type="com.example.frand01_advandfinalth_giangnnh.data.model.TireSensor" />
+
+        <variable
+            name="tireSensorTwo"
+            type="com.example.frand01_advandfinalth_giangnnh.data.model.TireSensor" />
+
+        <variable
+            name="tireSensorThree"
+            type="com.example.frand01_advandfinalth_giangnnh.data.model.TireSensor" />
+
+        <variable
+            name="tireSensorFour"
+            type="com.example.frand01_advandfinalth_giangnnh.data.model.TireSensor" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:background="@color/color_131313"
+        tools:context=".view.fragment.ObserverFragment">
 
-</FrameLayout>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/linear2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{tireSensorOne.id_type}"
+                android:textColor="@{(tireSensorOne.pressure > tireDefaut.highPressure) || ( tireDefaut.lowPressure > tireSensorOne.pressure ) ||(tireSensorOne.temperature > tireDefaut.highTemperature) ? @color/color_F30606 : @color/white}"
+                android:textSize="@dimen/sp_30"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{tireSensorOne.pressure > tireDefaut.highPressure ? @string/mess_high_pressure : (tireDefaut.lowPressure > tireSensorOne.pressure ?  @string/mess_low_pressure : (tireSensorOne.temperature > tireDefaut.highTemperature ? @string/mess_high_temperature :  @string/mess_observer))}"
+                android:textColor="@color/color_F30606"
+                android:textSize="@dimen/sp_20" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{@string/pressure(String.valueOf(tireSensorOne.pressure))}"
+                android:textColor="@{(tireSensorOne.pressure > tireDefaut.highPressure) || ( tireDefaut.lowPressure > tireSensorOne.pressure ) ? @color/color_F30606 : @color/white}" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/temperature(String.valueOf(tireSensorOne.temperature))}"
+                android:textColor="@{(tireSensorOne.pressure > tireDefaut.highPressure) || ( tireDefaut.lowPressure > tireSensorOne.pressure ) ||(tireSensorOne.temperature > tireDefaut.highTemperature) ? @color/color_F30606 : @color/white}" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@id/linear2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/linear1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linear1"
+            app:layout_constraintTop_toTopOf="@+id/linear1">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{tireSensorTwo.id_type}"
+                android:textColor="@{(tireSensorOne.pressure > tireDefaut.highPressure) || ( tireDefaut.lowPressure > tireSensorOne.pressure ) ||(tireSensorOne.temperature > tireDefaut.highTemperature) ? @color/color_F30606 : @color/white}"
+                android:textSize="@dimen/sp_30"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{tireSensorOne.pressure > tireDefaut.highPressure ? @string/mess_high_pressure : (tireDefaut.lowPressure > tireSensorOne.pressure ?  @string/mess_low_pressure : (tireSensorOne.temperature > tireDefaut.highTemperature ? @string/mess_high_temperature :  @string/mess_observer))}"
+                android:textColor="@color/color_F30606"
+                android:textSize="@dimen/sp_20" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{@string/pressure(String.valueOf(tireSensorOne.pressure))}"
+                android:textColor="@{(tireSensorOne.pressure > tireDefaut.highPressure) || ( tireDefaut.lowPressure > tireSensorOne.pressure ) ? @color/color_F30606 : @color/white}" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{@string/temperature(String.valueOf(tireSensorOne.temperature))}"
+                android:textColor="@{(tireSensorOne.pressure > tireDefaut.highPressure) || ( tireDefaut.lowPressure > tireSensorOne.pressure ) ||(tireSensorOne.temperature > tireDefaut.highTemperature) ? @color/color_F30606 : @color/white}" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

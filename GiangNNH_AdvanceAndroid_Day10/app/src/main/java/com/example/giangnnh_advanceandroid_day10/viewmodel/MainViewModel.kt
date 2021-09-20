@@ -21,7 +21,7 @@ class MainViewModel @Inject constructor(private val mainRepository: MainReposito
     var listCitiesLiveData: MutableLiveData<Resource<ListCity>> = MutableLiveData()
         private set
 
-    fun getWeatherOfCity(name: String) {
+    fun getWeatherOfCity(name: String = "Đà Nẵng") {
         mainRepository.getWeatherOfCity(name).subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread()).doOnSubscribe {
                 weatherDataLiveData.value = Resource.Loading(Event(true))

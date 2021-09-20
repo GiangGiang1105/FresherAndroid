@@ -9,7 +9,7 @@ interface IWeatherService {
 
     @GET("weather")
     fun getWeatherOfCity(
-        @Query("q") name: String = "Danang",
+        @Query("q") name: String,
         @Query("appid") appid: String = API_KEY
     ): Observable<WeatherData>
 

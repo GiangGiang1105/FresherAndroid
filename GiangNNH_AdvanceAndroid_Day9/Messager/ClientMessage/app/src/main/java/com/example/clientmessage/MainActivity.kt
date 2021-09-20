@@ -31,7 +31,9 @@ class MainActivity : AppCompatActivity() {
             mServer = Messenger(service)
         }
 
-        override fun onServiceDisconnected(name: ComponentName?) {}
+        override fun onServiceDisconnected(name: ComponentName?) {
+            mServer = null 
+        }
 
     }
 
@@ -40,7 +42,9 @@ class MainActivity : AppCompatActivity() {
             mClient = Messenger(service)
         }
 
-        override fun onServiceDisconnected(name: ComponentName?) {}
+        override fun onServiceDisconnected(name: ComponentName?) {
+            mClient = null
+        }
 
     }
 
@@ -50,14 +54,16 @@ class MainActivity : AppCompatActivity() {
         intentServer =
             Intent(this, IPCMessengerServer::class.java)
         intentClient = Intent(this, IPCMessengerClient::class.java)
-        binding.startServer.setOnClickListener {
-            handleServer()
-        }
-        binding.startCommunication.setOnClickListener {
-            handleCommunication()
-        }
-        binding.startClient.setOnClickListener {
-            handleClient()
+        binding.apply {
+            startServer.setOnClickListener {
+                handleServer()
+            }
+            startCommunication.setOnClickListener {
+                handleCommunication()
+            }
+            startClient.setOnClickListener {
+                handleClient()
+            }
         }
         setContentView(binding.root)
     }
@@ -83,30 +89,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun stopServer() {
-        val bundle = Bundle().apply {
-            putInt(KEY_SEND_STOP, KEY_STOP)
-        }
         val message = Message.obtain().apply {
-            data = bundle
+            what = Constants.STOP_SERVER
         }
         mServer?.send(message)
         unbindService(connectionServer)
         stopService(intentServer)
-        Log.d(TAG, "sendMessenger STOP SERVER : $KEY_STOP")
         binding.startServer.text = getString(R.string.text_button_start_server)
     }
 
     private fun stopClient() {
-        val bundle = Bundle().apply {
-            putInt(KEY_SEND_STOP, KEY_STOP)
-        }
         val message = Message.obtain().apply {
-            data = bundle
+            what = Constants.STOP_CLIENT
         }
         mClient?.send(message)
         unbindService(connectionClient)
         stopService(intentClient)
-        Log.d(TAG, "sendMessenger STOP CLIENT : $KEY_STOP")
         binding.startClient.text = getString(R.string.text_button_start_client)
     }
 
@@ -117,10 +115,11 @@ class MainActivity : AppCompatActivity() {
             binding.startCommunication.text = getString(R.string.text_button_start_communication)
         } else {
             if (mClient != null && mServer != null) {
-                mServer?.let {
-                    IPCMessengerClient.getInstance().initMessengerServer(it)
+                val msg = Message.obtain().apply {
+                    what = Constants.START_COMMUNICATE
+                    replyTo = mServer
                 }
-                IPCMessengerClient.getInstance().sendData()
+                mClient!!.send(msg)
             } else {
                 Toast.makeText(
                     this,
@@ -131,11 +130,5 @@ class MainActivity : AppCompatActivity() {
             binding.startCommunication.text = getString(R.string.text_button_stop_communication)
         }
         isCommunicate = !isCommunicate
-    }
-
-    companion object {
-        private const val TAG = "MainActivity-Client"
-        private const val KEY_STOP = 100
-        private const val KEY_SEND_STOP = "STOP"
     }
 }

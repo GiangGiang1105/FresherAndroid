@@ -5,37 +5,36 @@ import android.content.Context
 import android.content.Intent
 import android.os.*
 import android.util.Log
+import androidx.core.os.bundleOf
+import com.example.clientmessage.Constants
 import com.example.clientmessage.R
 
 class IPCMessengerServer : Service() {
 
     private val mHandler = object : Handler(Looper.getMainLooper()) {
         override fun handleMessage(msg: Message) {
-            val keyStop = msg.data.getInt(KEY_RECEIVE_STOP)
-            if (keyStop == KEY_STOP) stopMessener()
-            else {
-                val msgKey = msg.data.getInt(KEY_RECEIVE)
-                Log.d(TAG, " Receive Message:$msgKey ")
-                var msgValue: String = handleKeyToValue(msgKey)
-                replyMessage(msg, msgValue)
+            when (msg.what) {
+                Constants.FROM_CLIENT -> {
+                    val key = msg.data.getInt(Constants.KEY)
+                    Log.d(TAG, " Receive key from : $key")
+                    val value: String = handleKeyToValue(key)
+                    replyMessage(msg, value)
+                }
+                Constants.STOP_SERVER -> {
+                    stopServerMessener()
+                }
             }
         }
     }
 
-    private val messager = Messenger(mHandler)
+    private val messenger = Messenger(mHandler)
 
-    override fun onBind(intent: Intent): IBinder {
-        return messager.binder
-    }
-
-    override fun onUnbind(intent: Intent?): Boolean {
-        return super.onUnbind(intent)
-    }
+    override fun onBind(intent: Intent): IBinder = messenger.binder
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         when (intent?.action) {
             ACTION_STOP -> {
-                stopMessener()
+                stopServerMessener()
             }
             else -> throw IllegalArgumentException("No action!!!")
         }
@@ -45,6 +44,33 @@ class IPCMessengerServer : Service() {
     override fun onCreate() {
         super.onCreate()
         startForeground(ID_SERVICE_FOREGROUND, createNotification())
+    }
+
+    private fun handleKeyToValue(key: Int): String = when (key) {
+        0 -> "Window"
+        1 -> "Linux"
+        2 -> "Mac"
+        3 -> "IOS"
+        4 -> "Unix"
+        5 -> "Android"
+        else -> throw IllegalArgumentException("No key")
+    }
+
+    private fun replyMessage(message: Message, value: String) {
+        Message.obtain().apply {
+            data = bundleOf(Constants.VALUE to value)
+            what = Constants.TO_CLIENT
+            replyTo = messenger
+            message.replyTo.send(this)
+        }
+        Log.d(TAG, "Reply to client: $value")
+    }
+
+    private fun stopServerMessener() {
+        mHandler.removeCallbacksAndMessages(null)
+        stopForeground(true)
+        stopSelf()
+        Log.e(TAG, "Stop server !")
     }
 
     private fun createNotification(): Notification {
@@ -72,42 +98,11 @@ class IPCMessengerServer : Service() {
             .build()
     }
 
-    private fun handleKeyToValue(key: Int): String = when (key) {
-        0 -> "Window"
-        1 -> "Linux"
-        2 -> "Mac"
-        3 -> "IOS"
-        4 -> "Unix"
-        5 -> "Android"
-        else -> throw IllegalArgumentException("No key")
-    }
-
-    private fun replyMessage(message: Message, value: String) {
-        val bundle = Bundle().apply {
-            putString(KEY_REPLY, value)
-        }
-        Message.obtain(message).apply {
-            data = bundle
-            message.replyTo.send(this)
-        }
-        Log.d(TAG, "replyMessage: $value")
-    }
-
-    private fun stopMessener() {
-        mHandler.removeCallbacksAndMessages(null)
-        stopForeground(true)
-        stopSelf()
-        Log.e(TAG, "stopMessener: ", )
-    }
 
     companion object {
-        private const val TAG = "IPCMessagerService"
+        private const val TAG = "IPC Server"
         private const val CHANNEL_ID = "IPC Server"
         private const val ACTION_STOP = "Stop Server"
         private const val ID_SERVICE_FOREGROUND = 5
-        private const val KEY_STOP = 100
-        private const val KEY_RECEIVE = "KEY"
-        private const val KEY_REPLY = "VALUE"
-        private const val KEY_RECEIVE_STOP = "STOP"
     }
 }
